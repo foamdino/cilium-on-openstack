@@ -1,0 +1,9 @@
+---
+  env_name: cilium-on-openstack
+  os_region: eu-west
+  os_env: li-rnd
+  auth_url: https://openstack.gb-lon.thghosting.cloud:5000/v3
+  tenant_id: e86e59a3f1274da39c5369b1a626e672
+  os_domain: voyager
+  env: cilium
+  cidr: "10.66.1.0/24"

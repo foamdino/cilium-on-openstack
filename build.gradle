@@ -1,0 +1,20 @@
+plugins {
+    id 'nebula.release' version '15.3.1'
+    id 'co.riiid.gradle' version '0.4.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+github {
+    owner = 'foamdino'
+    repo = 'cilium-on-openstack'
+    token = System.getenv('GRGIT_PASS') ?: "-"
+    tagName = "v${version}"
+    name = "${version}"
+    prerelease = ("${version}".contains("-rc"))
+    targetCommitish = 'main'
+}
+
+tasks.release.finalizedBy tasks.githubRelease
