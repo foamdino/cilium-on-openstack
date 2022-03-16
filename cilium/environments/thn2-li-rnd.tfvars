@@ -3,7 +3,7 @@ env = "cilium"
 os_region = "eu-west"
 auth_url = "https://openstack.gb-lon.thghosting.cloud:5000/v3"
 tenant_id = "e86e59a3f1274da39c5369b1a626e672"
-workspace = "cilium"
+workspace = "thn2-li-rnd"
 os_env = "li-rnd"
 user_domain_name = "voyager"
 
@@ -14,6 +14,10 @@ mtu_value = 1450
 cidr = {
   dmz = "10.66.1.0/24"
   cilium = "10.66.2.0/24"
+}
+
+whitelisted_networks = {
+
 }
 
 volume_availability_zones = ["gb-lon-1", "gb-lon-2", "gb-lon-3"]
@@ -29,6 +33,6 @@ env_vars_file = "thn2-li-rnd.yml"
 bastion_instance_count = 1
 bastion_instance_flavor = "c1.tiny"
 
-# github runner
-cilium_instance_count = 1
-cilium_instance_flavor = "m1.medium"
+# test vm
+cilium_test_vm_instance_count = 1
+cilium_test_vm_instance_flavor = "m1.medium"

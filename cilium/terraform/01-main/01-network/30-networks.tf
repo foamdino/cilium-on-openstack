@@ -28,7 +28,7 @@ resource "openstack_networking_subnet_v2" "cilium" {
   network_id = openstack_networking_network_v2.cilium_network.id
   cidr = var.cidr["cilium"]
   allocation_pool {
-    start = cidrhost(var.cidr["odf"], 20)
-    end = cidrhost(var.cidr["odf"], 254)
+    start = cidrhost(var.cidr["cilium"], 20)
+    end = cidrhost(var.cidr["cilium"], 254)
   }
 }

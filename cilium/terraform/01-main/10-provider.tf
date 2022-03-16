@@ -15,8 +15,8 @@ provider "openstack" {
 terraform {
   backend "s3" {
     profile = "soteria"
-    bucket = "cilium-thn2-li-rnd-terraform-state"
-    dynamodb_table = "cilium-thn2-li-rnd-terraform-state"
+    bucket = "soteria-terraform-state"
+    dynamodb_table = "soteria-terraform-state"
     region = "eu-west-1"
     key = "cilium/main"
   }
