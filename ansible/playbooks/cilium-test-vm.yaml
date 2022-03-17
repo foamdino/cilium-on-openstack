@@ -7,4 +7,4 @@
     - role: users
     - role: utc-timezone
     - role: banner
-    - role: github-runner
+    - role: cilium

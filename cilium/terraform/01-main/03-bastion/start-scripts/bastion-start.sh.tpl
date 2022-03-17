@@ -18,8 +18,7 @@ PLAYBOOK_DIR=$(echo $META | jq -rj '.playbook_dir')
 PLAYBOOK=$(echo $META | jq -rj '.playbook')
 ENV_VARS=$(echo $META | jq -rj '.env_vars_file')
 
-curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
-python3 /tmp/get-pip.py "pip==$PIP_VERSION"
+python -m ensurepip --upgrade
 pip3 install --ignore-installed --upgrade $DEPENDENCIES
 
 cd /tmp
